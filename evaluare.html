@@ -1,0 +1,150 @@
+<html>
+<head>
+	<title> Unit 2 </title>
+	<link rel="stylesheet" href="styleevaluare.css">
+<script>
+	
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+</head>
+<body>
+	<h1><i>Dumitrita Sarah TOCACI</i></h1>
+	<h2> <a href="https://www.utcluj.ro/">Dumitrita@utcluj.ro</a>
+<h3 id="poz">
+	<p id="structura"><u><i>Structura retelei personale si accesul la internet</i></u></p>
+	<img src="diagrama.jpg"  width="400" height="450">
+	<p id="structura"><u><i>Caracteristicile conexiunii la retea</i></u></p>
+	<ul>
+		<li> Adresa MAC
+			<p>F8-32-E4-2D-85-72</p>
+		<li> Adresa IP
+			<p> 1A-C2-DD-97-A7-59</p>
+		<li> Debit la download
+		<li> Debit la upload
+	</ul>
+</h3>
+<p id="specificatii"><u><i> Specificatii tehnice ale statiei principale de lucru </i></u></p>
+<table>
+	<tr>
+	<tr>
+		<th>Denumire componenta</th>
+		<th>Parametri</th>
+		<th>Producator</th>
+	</tr>
+	<tr>
+		<td>Procesor</td>
+		<td>Frecventa 2.4 GHz</td>
+		<td>Intel Corporatio</td>
+	</tr>
+	<tr>
+		<td>Placa de baza</td>
+		<td>Versiunea 1.0</td>
+		<td>ASUSTek Computer INC.</td>
+	</tr>
+	<tr>
+		<td>Placa video</td>
+		<td>Memorie Totala: 2125 MB</td>
+		<td>Intel Corporation</td>
+	</tr>
+	</tr>
+	</table>
+
+<p id="specificatii"><u><b> Utilizarea resurselor (slideshow)</b></u></p>
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="poza1.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="poza2.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="poza3.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="poza4.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="poza5.jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="poza6.jpg" style="width:50%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="poza1.jpg" style="width:50%" onclick="currentSlide(1)" alt="Laptop Asus X551C">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="poza2.jpg" style="width:50%" onclick="currentSlide(2)" alt="Porturi">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="poza3.jpg" style="width:50%" onclick="currentSlide(3)" alt="Aplicatii si procese">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="poza4.jpg" style="width:50%" onclick="currentSlide(4)" alt="Procesor">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="poza5.jpg" style="width:50%" onclick="currentSlide(5)" alt="Memorie">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="poza6.jpg" style="width:50%" onclick="currentSlide(6)" alt="Utiliarea resurselor">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
